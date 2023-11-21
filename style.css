@@ -1,8 +1,15 @@
 * {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
+  height: 100%;
 }
+
+/* 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+} */
 
 #loader {
   background: #000 url(images/loader.gif) no-repeat center center;
@@ -11,4 +18,42 @@
   width: 100%;
   position: fixed;
   z-index: 9999;
+}
+
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti {
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  animation: fall 10s ease-in-out infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.second {
+  height: 100vh;
+  width: 100%;
+  /* background-color: red; */
+}
+
+.third {
+  height: 100vh;
+  width: 100%;
+  /* background-color: green; */
 }
