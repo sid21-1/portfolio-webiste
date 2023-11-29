@@ -1,18 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@900&display=swap");
+/* UTILITY CLASSES */
 * {
   margin: 0;
   padding: 0;
-  height: 100%;
+  box-sizing: border-box;
 }
 
-/* 
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-} */
+:root {
+  --light-grey: #cccccc;
+  --footer: #1a1a2e; /* use this for footer */
+  --Light-Blue: #add8e6;
+  --image-background: #ffb366; /* use this in navbar anchor tags as well */
+  --primary-background-color: #f5f5dc;
+  --Soft-Pink: #ffd9e5;
+  --Dark-Slate-Gray: #2b3856;
+  --black: black; /* will be using this for fonts */
+  --font-family-sans: "Open Sans", sans-serif;
+  --font-family-roboto: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--primary-background-color);
+}
 
 #loader {
-  background: #000 url(images/loader.gif) no-repeat center center;
+  background: #18181b url(images/loader.gif) no-repeat center center;
   background-size: 10%;
   height: 100vh;
   width: 100%;
@@ -20,40 +32,48 @@ body, html {
   z-index: 9999;
 }
 
-.confetti-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+/* main section */
+
+.container {
+  max-width: 1370px;
+  background-color: blue;
+  margin: 0 auto;
 }
 
-.confetti {
-  width: 3px;
-  height: 3px;
-  background-color: black;
-  position: absolute;
-  animation: fall 10s ease-in-out infinite;
+/* Nav bar */
+
+nav {
+  background-color: red;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
 
-@keyframes fall {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-  }
+.logo p {
+  font-family: var(--font-family-sans);
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-.second {
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--black);
+  font-family: var(--font-family-sans);
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-left: 5rem;
+}
+
+.home {
+  background-color: green;
   height: 100vh;
-  width: 100%;
-  /* background-color: red; */
-}
-
-.third {
-  height: 100vh;
-  width: 100%;
-  /* background-color: green; */
 }
