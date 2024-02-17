@@ -1,61 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Vite + React</title>
   </head>
   <body>
-    <!-- SECTION LOADER -->
-    <div id="loader"></div>
-    <!-- MAIN SECTION -->
-    <div id="main">
-      <div class="container">
-        <nav>
-          <div class="logo">
-            <p>Siddhanth.</p>
-          </div>
-          <div class="links">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Resume</a>
-            <a href="#">Contact</a>
-          </div>
-          <a href="mailto:guptasiddhanth2@gmail.com"><button>Email</button></a>
-        </nav>
-      </div>
-      <div class="home container">
-        <div class="intro">
-          <div class="intro-1">
-            <p>Hi I Am</p>
-            <p>Siddhanth Gupta</p>
-            <a href="#">Projects</a>
-            <p><span id="element"></span></p>
-          </div>
-          <div class="intro-2">
-            <a href="mailto:guptasiddhanth2@gmail.com"
-              ><button>Hire Me</button></a
-            >
-          </div>
-        </div>
-        <div class="image"></div>
-      </div>
-    </div>
-
-    <script src="script.js"></script>
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-      var typed = new Typed("#element", {
-        strings: ["Front-end developer", "Learner"],
-        typeSpeed: 100, // Typing speed in milliseconds
-        backSpeed: 70, // Deleting speed in milliseconds
-        backDelay: 1500, // Delay before starting to delete
-        startDelay: 500, // Delay before starting to type after deleting
-        loop: true,
-      });
-    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
