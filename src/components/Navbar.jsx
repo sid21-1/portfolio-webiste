@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <div className="shadow-md w-screen top-0 left-0  fixed bg-[#FFFAFF]">
-        <div className="md:flex items-center justify-between bg-white py-8  text-gray-800 md:px-10 px-7">
+        <div className="md:flex items-center justify-between bg-white py-8  text-gray-800 md:px-28 px-7">
           <div className=" cursor-pointer font-bold text-lg leading-none font-[Sora] md:text-3xl">
             Siddhanth
           </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
 
           <ul
-            className={`md:flex items-center leading-none text-lg md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-400 ease-in ${
+            className={`md:flex items-center leading-none text-lg md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-7 transition-all duration-400 ease-in ${
               open ? "top-20" : "top-[-490px]"
             }`}
           >
@@ -45,7 +45,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <Button>Resume</Button>
+            <Button className="md:ml-8">Resume</Button>
           </ul>
         </div>
       </div>

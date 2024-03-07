@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
-const Button = (props) => {
+const Button = ({ children, className }) => {
   return (
-    <button className='bg-indigo-600 text-white py-2 px-6 rounded md:ml-8 hover:bg-indigo-400  font-semibold duration-500'>{props.children}</button>
-  )
-}
+    <button
+      className={`bg-[#FC5130] text-white py-2 px-6 rounded  hover:bg-[#d84315] font-semibold duration-500 ${className}`}
+    >
+      {children}
+    </button>
+  );
+};
 
-export default Button
+export default Button;
