@@ -6,6 +6,7 @@ import image4 from "../assets/imagenew2.svg";
 import image5 from "../assets/imagenew2.svg";
 import image6 from "../assets/imagenew3.svg";
 import { HiExternalLink } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const projectsData = [
   {
@@ -65,7 +66,12 @@ const ProjectList = () => {
                 project.id % 2 == 0 ? " md:order-2" : " "
               }`}
             >
-              <img src={isMd ? project.newImage : project.image} alt="" />
+              <motion.img
+                className="cursor-pointer"
+                src={isMd ? project.newImage : project.image}
+                alt=""
+                whileHover={{ scale: 1.11, transition: { duration: 0.3 } }}
+              />
             </div>
             <div
               className={`md:w-1/2 md:mb-28 ${
@@ -78,7 +84,7 @@ const ProjectList = () => {
               <p className="text-white text-2xl md:text-3xl my-4 font-extrabold">
                 {project.title}
               </p>
-              <p className="text-[#71717A] text-[1rem]">
+              <p className="text-[#71717A] text-[1rem] mb-8">
                 {project.description}
               </p>
             </div>

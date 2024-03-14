@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="shadow-md w-screen top-0 left-0  fixed bg-[#FFFAFF]">
+      <div className="shadow-md w-screen top-0 left-0  fixed bg-[#FFFAFF] z-10">
         <div className="md:flex items-center justify-between bg-white py-8  text-gray-800 md:px-28 px-7">
           <div className=" cursor-pointer font-bold text-lg leading-none font-[Sora] md:text-3xl">
             Siddhanth

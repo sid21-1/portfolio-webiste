@@ -6,8 +6,11 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
+import LocomotiveScroll from "locomotive-scroll";
 
 function App() {
+  const locomotiveScroll = new LocomotiveScroll();
+
   return (
     <>
       <Navbar />
