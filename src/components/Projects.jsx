@@ -58,7 +58,7 @@ const ProjectList = () => {
         {projectsData.map((project) => (
           <div
             key={project.id}
-            className="px-8 py-4 md:px-28 flex flex-col md:flex-row md:justify-center md:items-center md:w-full"
+            className="px-8 py-4 md:px-28 flex flex-col md:flex-row md:justify-center md:items-center md:w-full md:gap-3"
           >
             <div
               className={`flex justify-center items-center md:w-1/2 ${

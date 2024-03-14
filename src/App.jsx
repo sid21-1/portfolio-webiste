@@ -4,15 +4,19 @@ import LandingPage from "./components/LandingPage";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
       <Navbar />
-      <LandingPage/>
+      <LandingPage />
       {/* <Skills/> */}
-      <About/>
-      <Projects/>
+      <About />
+      <Projects />
+      <Form />
+      <Footer />
     </>
   );
 }
