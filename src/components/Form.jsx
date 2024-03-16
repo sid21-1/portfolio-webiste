@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SocialMediaBtn from "./SocialMediaBtn";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import { HiExternalLink } from "react-icons/hi";
@@ -12,14 +12,77 @@ const Form = () => {
     },
   ];
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const handleClick = (url) => {
     window.open(url, "_blank");
   };
 
+  const validateForm = () => {};
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const isValid = validateForm();
+  if (isValid) {
+    console.log("Form Submitted");
+  } else {
+    console.log("form imvalid");
+  }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
   return (
-    <div className="w-full h-auto px-8 py-4 md:px-28 flex flex-col md:flex-row">
-      <div className="w-full md:w-1/2 ">
-        <h1>hello my name is siddhanth</h1>
+    <div className="w-full h-auto px-8 py-4 md:px-28 flex flex-col md:flex-row ">
+      <div className=" form-div w-full md:w-1/2 ">
+        <form onSubmit={handleSubmit}>
+          <div>
+            <input
+              className="border-2 border-black rounded-md px-3 py-2 w-full mb-5 md:w-[87%] focus:border-gray-500 "
+              type="text"
+              name="name"
+              value={formData.name}
+              placeholder="Enter your name"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <input
+              className="border-2 border-black rounded-md px-3 py-2 w-full mb-5 md:w-[87%]"
+              type="email"
+              name="email"
+              value={formData.email}
+              placeholder="Enter your email"
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <input
+              className="border-2 border-black rounded-md px-3 py-10 w-full mb-5 md:w-[87%]"
+              type="text"
+              name="message"
+              value={formData.message}
+              placeholder="enter the message"
+              onChange={handleChange}
+            />
+          </div>
+          <button
+            className="px-5 py-4 mr-4 rounded  border-2 border-black hover:bg-[#303036] hover:text-white duration-500"
+            type="Submit"
+          >
+            Get in Touch
+          </button>
+        </form>
         <div className=" icon-div  flex items-start mb-10  w-full  mt-7 ">
           {socialMediaIcons.map(({ icon, url }, index) => (
             <SocialMediaBtn key={index} onClick={() => handleClick(url)}>
