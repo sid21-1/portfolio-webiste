@@ -2,21 +2,35 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { CiMenuBurger } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
+
 const Navbar = () => {
   let Links = [
-    { name: "About Me", link: "/" },
-    { name: "Skills", link: "/" },
-    { name: "Project", link: "/" },
-    { name: "Contact Me", link: "/" },
+    { name: "About Me", id: "about" },
+    { name: "Skills", id: "skills" },
+    { name: "Project", id: "project" },
+    { name: "Contact Me", id: "contact" },
   ];
 
   const [open, setOpen] = useState(false);
 
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+        duration: 1000,
+      });
+      setOpen(false);
+    }
+  };
+
   return (
     <>
-      <div className="shadow-md w-screen top-0 left-0  fixed bg-[#FFFAFF] z-10">
-        <div className="md:flex items-center justify-between bg-white py-8  text-gray-800 md:px-28 px-7">
-          <div className=" cursor-pointer font-bold text-lg leading-none font-[Sora] md:text-3xl">
+      <div className="shadow-md w-screen top-0 left-0 fixed bg-[#FFFAFF] z-10">
+        <div className="md:flex items-center justify-between bg-white py-8 text-gray-800 md:px-28 px-7">
+          <div className="cursor-pointer font-bold text-lg leading-none font-[Sora] md:text-3xl">
             Siddhanth
           </div>
           <div
@@ -31,17 +45,13 @@ const Navbar = () => {
               open ? "top-20" : "top-[-490px]"
             }`}
           >
-            {Links.map((Link) => (
-              <li
-                key={Link.name}
-                className="md:ml-20
-                md:my-0 my-7  "
-              >
+            {Links.map((link) => (
+              <li key={link.name} className="md:ml-20 md:my-0 my-7">
                 <a
-                  className="text-gray-800 hover:text-gray-400 duration-500 cursor-pointer font-semibold "
-                  href={Link.link}
+                  className="text-gray-800 hover:text-gray-400 duration-500 cursor-pointer font-semibold"
+                  onClick={() => scrollToSection(link.id)}
                 >
-                  {Link.name}
+                  {link.name}
                 </a>
               </li>
             ))}

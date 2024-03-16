@@ -43,7 +43,10 @@ const Form = () => {
   };
 
   return (
-    <div className="w-full h-auto px-8 py-4 md:px-28 flex flex-col md:flex-row ">
+    <div
+      id="contact"
+      className="w-full h-auto px-8 py-4 md:px-28 flex flex-col md:flex-row "
+    >
       <div className=" form-div w-full md:w-1/2 ">
         <form onSubmit={handleSubmit}>
           <div>

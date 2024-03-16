@@ -51,7 +51,7 @@ const ProjectList = () => {
     };
   }, []);
   return (
-    <div className="bg-[#303036]">
+    <div id="project" className="bg-[#303036]">
       <h1 className="text-4xl font-normal text-white text-center my-7 py-7">
         My <span className="font-semibold">Projects</span>
       </h1>

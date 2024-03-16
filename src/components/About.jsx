@@ -3,7 +3,7 @@ import AboutUS from "../assets/AboutUS.png";
 const About = () => {
   return (
     <>
-      <div className="px-8 py-4 md:px-28  flex flex-col md:flex-row md:gap-7 mt-8 w-full">
+      <div id="about"  className="px-8 py-4 md:px-28  flex flex-col md:flex-row md:gap-7 mt-8 w-full">
         <div className="order-1 md:order-2 md:w-1/2 ">
           <img src={AboutUS} alt="" />
         </div>
